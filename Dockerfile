@@ -24,7 +24,6 @@ ENV FLASK_RUN_HOST=0.0.0.0
 
 # Run the tests
 FROM base as test
-RUN pip install --no-cache-dir unittest
 CMD ["python", "tests.py"]
 
 # Define the final stage
