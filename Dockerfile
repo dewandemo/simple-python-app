@@ -8,8 +8,8 @@ WORKDIR /app
 COPY . /app
 
 # Define a build argument
-ARG HARNESS_PIPELINE_ID=default_value
-ARG MLFLOW_TRACKING_URI=default_value
+ARG HARNESS_PIPELINE_ID
+ARG MLFLOW_TRACKING_URI
 
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
