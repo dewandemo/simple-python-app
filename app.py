@@ -2,8 +2,8 @@ import os
 
 def main():
     # Read environment variables from the host
-    variable1 = os.environ.get('MY_VARIABLE_1')
-    variable2 = os.environ.get('MY_VARIABLE_2')
+    variable1 = os.environ.get('MLFLOW_TRACKING_URI')
+    variable2 = os.environ.get('HARNESS_PIPELINE_ID')
 
     # Echo the variables
     print(f"Variable 1: {variable1}")
