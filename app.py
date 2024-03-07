@@ -1,16 +1,13 @@
-from flask import Flask, jsonify, request
+import os
 
-app = Flask(__name__)
+def main():
+    # Read environment variables from the host
+    variable1 = os.environ.get('MY_VARIABLE_1')
+    variable2 = os.environ.get('MY_VARIABLE_2')
 
-# Endpoint to echo a hello message with variable input
-@app.route('/hello/<name>', methods=['GET'])
-def hello(name):
-    return f'Hello, {name}!'
+    # Echo the variables
+    print(f"Variable 1: {variable1}")
+    print(f"Variable 2: {variable2}")
 
-# Endpoint to show app health
-@app.route('/health', methods=['GET'])
-def health():
-    return jsonify({'status': 'healthy'})
-
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    main()
