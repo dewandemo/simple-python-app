@@ -11,6 +11,11 @@ COPY . /app
 ARG HARNESS_PIPELINE_ID
 ARG MLFLOW_TRACKING_URI
 
+# Define a env var
+
+ENV HARNESS_PIPELINE_ID=${HARNESS_PIPELINE_ID}
+ENV MLFLOW_TRACKING_URI=${MLFLOW_TRACKING_URI}
+
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
