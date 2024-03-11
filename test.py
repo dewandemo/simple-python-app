@@ -2,9 +2,5 @@
 
 import subprocess
 
-# Run the Docker container with a mounted volume
-subprocess.run([
-    'docker', 'run', '--rm',
-    '-v', '/harness/output',  # Adjust this path based on your host machine
-    'my-python-app'
-])
+# Run the app.py script using native Python
+subprocess.run(['python', 'app.py'])
